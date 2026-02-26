@@ -1,191 +1,582 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rishabh Soni — Resume</title>
-  <style>
-    :root {
-      --text:#0f172a;--muted:#475569;--accent:#0ea5e9;--bg:#ffffff;--line:#e2e8f0;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Noto Sans","Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji"}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .page{max-width:900px;margin:32px auto;padding:28px;border:1px solid var(--line);border-radius:16px;box-shadow:0 4px 16px rgba(2,6,23,.04)}
-    header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:12px 24px;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:18px}
-    h1{font-size:32px;margin:0 0 4px 0;line-height:1.2}
-    .title{font-weight:600;color:var(--muted)}
-    .contact{font-size:14px;color:var(--muted)}
-    .chip{display:inline-block;border:1px solid var(--line);padding:2px 10px;border-radius:999px;font-size:12px;margin:2px 6px 0 0;color:var(--muted)}
-    h2{font-size:18px;margin:18px 0 8px 0;letter-spacing:.3px;text-transform:uppercase}
-    section{margin:10px 0 8px}
-    ul{padding-left:20px;margin:6px 0}
-    li{margin:4px 0}
-    .grid{display:grid;gap:10px}
-    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-    .role{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
-    .role-title{font-weight:600}
-    .muted{color:var(--muted)}
-    .btns{display:flex;gap:8px;margin-top:8px}
-    button{cursor:pointer;border:1px solid var(--line);background:#f8fafc;padding:8px 12px;border-radius:10px}
-    button:hover{background:#f1f5f9}
-    @media (max-width:720px){
-      .page{margin:0;border:none;border-radius:0;box-shadow:none;padding:18px}
-      .grid-2{grid-template-columns:1fr}
-    }
-    @media print{
-      .page{box-shadow:none;border:none;margin:0;padding:0}
-      .btns{display:none}
-      a{color:inherit;text-decoration:none}
-    }
-  </style>
-</head>
-<body>
-  <div class="page" role="document">
-    <header>
-      <div>
-        <h1>Rishabh Soni</h1>
-        <div class="title">Full Stack Developer | Next.js, React, Node.js &amp; PHP | AWS &amp; Linux</div>
-      </div>
-      <div class="contact">
-        Udaipur, Rajasthan, India<br/>
-        <a href="mailto:rudhrasoni2003@gmail.com">rudhrasoni2003@gmail.com</a><br/>
-        <a href="https://www.linkedin.com/in/rishabh-soni-beyoung" target="_blank" rel="noopener">linkedin.com/in/rishabh-soni-beyoung</a>
-      </div>
-    </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rishabh Soni – Resume</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-    <section id="summary">
-      <h2>Summary</h2>
+      :root {
+        --light-grey: #d4d4d4;
+        --dark-grey: #4d4d4d;
+        --text-grey: #141414;
+        --bg: #fff;
+        --accent: #1a1a1a;
+      }
+
+      body {
+        font-family: "DM Sans", sans-serif;
+        color: var(--text-grey);
+        background: var(--bg);
+        font-size: 11pt;
+        line-height: 1.45;
+        max-width: 850px;
+        margin: 0 auto;
+        padding: 36px 48px;
+      }
+
+      /* HEADING */
+      .heading {
+        text-align: center;
+        margin-bottom: 14px;
+      }
+      .heading h1 {
+        font-size: 26pt;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        margin-bottom: 6px;
+      }
+      .heading .contact {
+        font-size: 10pt;
+        color: var(--dark-grey);
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 4px 8px;
+      }
+      .heading .contact span {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+      .heading .contact .sep {
+        color: var(--light-grey);
+      }
+      .heading a {
+        color: var(--dark-grey);
+        text-decoration: underline;
+      }
+
+      /* SECTION */
+      section {
+        margin-bottom: 14px;
+      }
+      .section-title {
+        font-size: 13pt;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        padding-bottom: 3px;
+        border-bottom: 2.5px solid var(--light-grey);
+        margin-bottom: 8px;
+      }
+
+      /* SUMMARY */
+      .summary p {
+        font-size: 10.5pt;
+      }
+
+      /* SUBHEADING */
+      .subheading {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 1px;
+      }
+      .subheading .left .company {
+        font-weight: 700;
+        font-size: 11pt;
+      }
+      .subheading .right {
+        font-size: 9.5pt;
+        color: var(--dark-grey);
+        text-align: right;
+        white-space: nowrap;
+      }
+      .subheading .left .role {
+        font-style: italic;
+        font-size: 10pt;
+        color: var(--dark-grey);
+      }
+
+      .entry {
+        margin-bottom: 10px;
+      }
+
+      /* ITEMS */
+      ul.items {
+        margin-top: 4px;
+        padding-left: 18px;
+        list-style: disc;
+      }
+      ul.items li {
+        font-size: 10pt;
+        margin-bottom: 2px;
+        line-height: 1.4;
+      }
+
+      /* PROJECT HEADING */
+      .project-heading {
+        font-weight: 700;
+        font-size: 10.5pt;
+        margin-bottom: 2px;
+      }
+      .project-heading .tech {
+        font-weight: 400;
+        font-style: italic;
+      }
+      .project-heading a {
+        color: var(--dark-grey);
+        text-decoration: underline;
+      }
+
+      /* SKILLS */
+      .skills-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 10pt;
+      }
+      .skills-table tr td:first-child {
+        font-weight: 700;
+        white-space: nowrap;
+        padding-right: 8px;
+        vertical-align: top;
+        padding-bottom: 4px;
+      }
+      .skills-table tr td:last-child {
+        color: var(--text-grey);
+      }
+
+      /* EDUCATION subheading same */
+      .edu-right {
+        font-size: 9.5pt;
+        color: var(--dark-grey);
+        text-align: right;
+      }
+      .edu-left .inst {
+        font-weight: 700;
+      }
+      .edu-left .degree {
+        font-style: italic;
+        font-size: 10pt;
+        color: var(--dark-grey);
+      }
+
+      strong {
+        font-weight: 600;
+      }
+
+      @media print {
+        body {
+          padding: 20px 32px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADING -->
+    <div class="heading">
+      <h1>Rishabh Soni</h1>
+      <div class="contact">
+        <span>Phone: +91 98750 54539</span>
+        <span class="sep">|</span>
+        <span
+          >Email:
+          <a href="mailto:rudhrasoni2003@gmail.com"
+            >rudhrasoni2003@gmail.com</a
+          ></span
+        >
+        <span class="sep">|</span>
+        <span
+          >LinkedIn:
+          <a
+            href="https://www.linkedin.com/in/rishabh-soni-beyoung"
+            target="_blank"
+            >rishabh-soni-beyoung</a
+          ></span
+        >
+      </div>
+    </div>
+
+    <!-- SUMMARY -->
+    <section class="summary">
+      <div class="section-title">Summary</div>
       <p>
-        Self-taught <strong>Full Stack Developer</strong> with hands-on experience in <strong>Next.js, React, Node.js, Express.js</strong>, and <strong>PHP</strong>. 
-        Currently working at <strong>Beyoung</strong> (product-based clothing brand), where I build and maintain <strong>Website Backend and ERP systems</strong> and scalable web applications. 
-        Skilled in <strong>frontend & backend development, debugging, and performance optimization</strong>. 
-        Trained in <strong>AWS &amp; Linux</strong> with practical deployment experience. Passionate about clean code, real-world problem-solving, and modern full stack solutions.
+        Web Developer with approximately 2 years of hands-on experience at
+        <strong>Beyoung.in</strong>, a product-based e-commerce clothing brand.
+        Specialized in building backend systems using
+        <strong>Node.js and Express.js</strong>, developing ERP modules in
+        <strong>Core PHP</strong>, and delivering modern UIs with
+        <strong>Next.js and React</strong>. Trained in
+        <strong>AWS Cloud and Linux administration</strong>. Strong focus on
+        clean code, API performance, and real-world problem-solving.
       </p>
     </section>
 
-    <section id="skills">
-      <h2>Top Skills</h2>
-      <div class="grid grid-2">
-        <div>
-          <div class="chip">Backend</div>
-          <ul>
-            <li>Node.js, Express.js</li>
-            <li>PHP (Core PHP)</li>
-          </ul>
+    <!-- EXPERIENCE -->
+    <section>
+      <div class="section-title">Experience</div>
+
+      <div class="entry">
+        <div class="subheading">
+          <div class="left">
+            <div class="company">Beyoung.in</div>
+            <div class="role">Executive Developer</div>
+          </div>
+          <div class="right">
+            <div>Oct. 2024 – Present</div>
+            <div>Udaipur, Rajasthan, India</div>
+          </div>
         </div>
-        <div>
-          <div class="chip">Frontend</div>
-          <ul>
-            <li>Next.js, React.js</li>
-            <li>HTML, CSS, JavaScript</li>
-          </ul>
+        <ul class="items">
+          <li>
+            Developed and maintained scalable
+            <strong>RESTful APIs</strong> using
+            <strong>Express.js (Node.js)</strong> for Beyoung's core e-commerce
+            backend; reduced API response time by <strong>30%</strong> and
+            improved overall throughput.
+          </li>
+          <li>
+            Built <strong>Next.js and React-based internal dashboards</strong>,
+            replacing legacy PHP interfaces and improving operational efficiency
+            across cross-functional teams.
+          </li>
+          <li>
+            Architected and delivered a
+            <strong>Wallet &amp; Loyalty Rewards System</strong> enabling
+            cashback credits, reward-point accumulation, redemption workflows,
+            and full transaction tracking.
+          </li>
+          <li>
+            Engineered a <strong>Smart Inventory Assignment System</strong> that
+            dynamically allocates and reassigns stock based on real-time
+            availability and incoming inventory forecasts.
+          </li>
+          <li>
+            Designed
+            <strong>Order and Inventory lifecycle management</strong> modules,
+            including history tracking and reporting dashboards used daily by
+            the operations team.
+          </li>
+          <li>
+            Applied <strong>Redis caching</strong> strategies to cut repeated
+            database calls and improve response times across high-traffic
+            endpoints.
+          </li>
+          <li>
+            Streamlined complex
+            <strong>MySQL queries and database schemas</strong>, significantly
+            reducing execution time on product and order management endpoints.
+          </li>
+          <li>
+            Deployed and managed applications on
+            <strong>AWS infrastructure with Linux servers</strong>, handling
+            environment configuration for both staging and production.
+          </li>
+          <li>
+            Collaborated with product, design, and operations teams in an
+            <strong>Agile environment</strong>, consistently delivering
+            maintainable, production-ready features on schedule.
+          </li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="subheading">
+          <div class="left">
+            <div class="company">Beyoung.in</div>
+            <div class="role">Intern Developer</div>
+          </div>
+          <div class="right">
+            <div>Jul. 2024 – Oct. 2024</div>
+            <div>Udaipur, Rajasthan, India</div>
+          </div>
         </div>
-        <div>
-          <div class="chip">Database</div>
-          <ul>
-            <li>MySQL</li>
-          </ul>
+        <ul class="items">
+          <li>
+            Built and maintained
+            <strong>ERP modules in CakePHP</strong> covering inventory
+            management, order processing, and internal reporting used daily by
+            operations staff.
+          </li>
+          <li>
+            Developed <strong>backend API endpoints</strong> and integrated them
+            with frontend JavaScript interfaces, gaining end-to-end full-stack
+            development experience.
+          </li>
+          <li>
+            Identified and resolved
+            <strong>performance bottlenecks and critical bugs</strong> in the
+            PHP codebase, enhancing the stability of core business workflows.
+          </li>
+          <li>
+            Executed feature enhancements using
+            <strong>PHP, MySQL, HTML, CSS, and JavaScript</strong> under senior
+            developer guidance.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- KEY ACHIEVEMENTS -->
+    <section>
+      <div class="section-title">Key Achievements</div>
+
+      <div class="entry">
+        <div class="project-heading">Backend Modernization</div>
+        <ul class="items">
+          <li>
+            Migrated a legacy Node.js 12 (CommonJS) backend to Node.js 22 with
+            ES Modules and full TypeScript adoption. Introduced Redis caching to
+            reduce API latency, established a service-layer architecture for
+            better separation of concerns, and integrated Drizzle ORM for
+            type-safe, efficient database queries.
+          </li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="project-heading">ERP System Development</div>
+        <ul class="items">
+          <li>
+            Designed and delivered complete ERP modules — inventory, orders, and
+            reporting — from scratch in Core PHP; adopted as daily operational
+            tools by the operations team.
+          </li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="project-heading">API &amp; Database Performance</div>
+        <ul class="items">
+          <li>
+            Enhanced high-traffic API endpoints and MySQL queries, cutting
+            backend response times for critical e-commerce operations.
+          </li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="project-heading">Self-Taught Full-Stack Engineer</div>
+        <ul class="items">
+          <li>
+            Independently mastered the full stack — from frontend (Next.js) and
+            backend (Node.js, Express) to cloud infrastructure (AWS, Linux) —
+            without a formal Computer Science degree.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section>
+      <div class="section-title">Projects</div>
+
+      <div class="entry">
+        <div class="project-heading">
+          Plango
+          <span class="tech">| People on Demand App — Expo + Supabase</span>
         </div>
-        <div>
-          <div class="chip">Cloud &amp; DevOps</div>
-          <ul>
-            <li>AWS, Linux</li>
-          </ul>
+        <ul class="items">
+          <li>
+            Cross-platform mobile service marketplace built with
+            <strong>Expo (React Native)</strong> and
+            <strong>Supabase</strong> (Auth, PostgreSQL, Storage), featuring
+            booking workflows, availability management, and role-based access
+            for Users and Providers.
+          </li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="project-heading">
+          Salt
+          <span class="tech"
+            >| Team &amp; Task Management System — Core PHP</span
+          >
+          |
+          <a href="https://task.besuperkids.in/login.php" target="_blank"
+            >Live Demo</a
+          >
         </div>
-        <div>
-          <div class="chip">Tools &amp; APIs</div>
-          <ul>
-            <li>Git, Postman, VS Code</li>
-            <li>AI Tools: ChatGPT, Claude</li>
-          </ul>
+        <ul class="items">
+          <li>
+            Internal collaboration tool built with
+            <strong>Core PHP &amp; MySQL</strong>, featuring task boards,
+            assignment logic, status workflows, a real-time chat module, and a
+            notification system.
+          </li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="project-heading">
+          EasyBook
+          <span class="tech"
+            >| Booking &amp; Reservation Platform — Next.js</span
+          >
         </div>
-        <div>
-          <div class="chip">Strengths</div>
-          <ul>
-            <li>Full Stack Projects, ERP Systems</li>
-            <li>Debugging, Performance Optimization</li>
-          </ul>
+        <ul class="items">
+          <li>
+            Full-stack web platform enabling users to book services and local
+            businesses to manage reservations, with multi-role dashboards (User
+            / Business) and a scalable backend structure.
+          </li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="project-heading">
+          Alphynx
+          <span class="tech">| Development Agency Website — Next.js</span> |
+          <a href="https://www.alphynx.in/" target="_blank">www.alphynx.in</a>
+        </div>
+        <ul class="items">
+          <li>
+            Responsive corporate website with SEO optimization, performance
+            improvements, and a production cloud deployment with proper
+            environment configuration.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EDUCATION & TRAINING -->
+    <section>
+      <div class="section-title">Education &amp; Training</div>
+
+      <div class="entry">
+        <div class="subheading">
+          <div class="left">
+            <div class="company">Mohanlal Sukhadia University</div>
+            <div class="role">Bachelor of Commerce (B.Com), General</div>
+          </div>
+          <div class="right">
+            <div>2022 – 2025</div>
+            <div>Udaipur, Rajasthan</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="subheading">
+          <div class="left">
+            <div class="company">Grras Solutions Pvt. Ltd</div>
+            <div class="role">
+              AWS &amp; Linux Training — AWS Core Services, Linux System
+              Administration, Cloud Deployment
+            </div>
+          </div>
+          <div class="right">
+            <div>Jun. 2023 – Sep. 2023</div>
+            <div>Ahmedabad, India</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="experience">
-      <h2>Experience</h2>
-
-      <div class="role">
-        <div>
-          <div class="role-title">Full Stack Developer — Beyoung.in</div>
-          <div class="muted">Udaipur, Rajasthan, India</div>
-        </div>
-        <div class="muted">Apr 2024 – Present</div>
-      </div>
-      <ul>
-        <li>Develop and maintain internal <strong>Beyoung.in</strong> backend services using <strong>Express.js</strong>.</li>
-        <li>Work on new <strong>Next.js and React-based dashboards</strong> for better UI and performance.</li>
-        <li>Optimize APIs and SQL queries for faster data processing and scalability.</li>
-        <li>Collaborate with cross-functional teams to deliver clean and efficient code.</li>
-        <li>Use <strong>AWS</strong> &amp; <strong>Linux</strong> for deployments and system management.</li>
-      </ul>
-
-      <div class="role">
-        <div>
-          <div class="role-title">PHP Developer Intern — Beyoung.in</div>
-          <div class="muted">Udaipur, Rajasthan, India</div>
-        </div>
-        <div class="muted">Jul 2023 – Mar 2024</div>
-      </div>
-      <ul>
-        <li>Worked on <strong>ERP modules</strong> and assisted in backend API development.</li>
-        <li>Improved debugging workflows and learned <strong>Express.js & React</strong> integration.</li>
-        <li>Implemented small-scale features using <strong>PHP & JavaScript</strong>.</li>
-      </ul>
+    <!-- SKILLS -->
+    <section>
+      <div class="section-title">Skills</div>
+      <table class="skills-table">
+        <tr>
+          <td>Backend</td>
+          <td>
+            Node.js, Express.js, PHP (Core, CakePHP), REST APIs, Supabase
+            (BaaS), Redis
+          </td>
+        </tr>
+        <tr>
+          <td>Frontend</td>
+          <td>Next.js, React, JavaScript (ES6+), HTML5, CSS3</td>
+        </tr>
+        <tr>
+          <td>Database</td>
+          <td>MySQL, SQL Query Optimization, Database Design, Drizzle ORM</td>
+        </tr>
+        <tr>
+          <td>Cloud &amp; DevOps</td>
+          <td>AWS, Linux, Server Deployment &amp; Management</td>
+        </tr>
+        <tr>
+          <td>Tools</td>
+          <td>
+            VS Code, Strapi (CMS), Swagger, Postman, Git, GitHub, AI Tools
+          </td>
+        </tr>
+      </table>
     </section>
+    <a
+      href="./resume.pdf"
+      download="Rishabh_Soni_Resume.pdf"
+      class="download-btn"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+        <polyline points="7 10 12 15 17 10" />
+        <line x1="12" y1="15" x2="12" y2="3" />
+      </svg>
+      Download PDF
+    </a>
 
-    <section id="training">
-      <h2>Training</h2>
-      <div class="role">
-        <div>
-          <div class="role-title">AWS &amp; Linux Training — Grras Solutions Pvt. Ltd</div>
-          <div class="muted">Ahmedabad, India</div>
-        </div>
-        <div class="muted">Jun 2023 – Sep 2023 (4 months)</div>
-      </div>
-      <ul>
-        <li>Completed structured training in <strong>AWS Cloud</strong> and <strong>Linux administration</strong>.</li>
-        <li>Applied training in deployments and server management.</li>
-      </ul>
-    </section>
-
-    <section id="education">
-      <h2>Education</h2>
-      <div class="role">
-        <div>
-          <div class="role-title">Mohanlal Sukhadia University, Udaipur</div>
-          <div class="muted">Bachelor of Commerce (B.Com), Business/Commerce, General</div>
-        </div>
-        <div class="muted">2023 – 2026</div>
-      </div>
-    </section>
-
-    <section id="highlights">
-      <h2>Highlights</h2>
-      <ul>
-        <li>1 year of <strong>PHP development</strong> and 6 months of <strong>Next.js & Express.js</strong> experience at Beyoung.</li>
-        <li>Built multiple <strong>Full Stack projects</strong> integrating modern web technologies.</li>
-        <li>Hands-on <strong>AWS &amp; Linux</strong> deployment knowledge.</li>
-        <li>Proficient in <strong>REST APIs, debugging, and performance optimization</strong>.</li>
-        <li>Actively learning and exploring <strong>AI integration tools</strong> in web development.</li>
-      </ul>
-    </section>
-
-    <div class="btns" aria-hidden="true">
-      <button onclick="window.print()">Print / Save as PDF</button>
-      <button onclick="navigator.clipboard.writeText(document.documentElement.outerHTML)">Copy HTML</button>
-    </div>
-
-    <p class="muted" style="margin-top:12px">Last updated: 12 Oct 2025</p>
-  </div>
-</body>
+    <style>
+      .download-btn {
+        position: fixed;
+        bottom: 28px;
+        right: 28px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: #1a1a1a;
+        color: #fff;
+        text-decoration: none;
+        font-family: "DM Sans", sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        padding: 12px 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+        transition:
+          background 0.2s,
+          transform 0.15s,
+          box-shadow 0.2s;
+        z-index: 1000;
+      }
+      .download-btn:hover {
+        background: #333;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      }
+      .download-btn:active {
+        transform: translateY(0);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+      }
+      @media print {
+        .download-btn {
+          display: none;
+        }
+      }
+    </style>
+  </body>
 </html>
